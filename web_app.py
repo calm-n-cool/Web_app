@@ -35,6 +35,8 @@ st.title("Lung X-RAY classification")
 st.markdown(STYLE, unsafe_allow_html = True)
 
 file = st.file_uploader("Upload the Lung X-RAY image to be analysed", type= ["PNG", "JPEG","JPG"])
+text_io = io.TextIOWrapper(file)
+
 show_file = st.empty()
 
 if not file:
